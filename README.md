@@ -17,7 +17,7 @@
 
 #####b. 输出模拟的地图的经纬度范围信息：
 
-![](https://i.loli.net/2019/06/22/5d0e479164f2e15868.png
+![地图](https://i.loli.net/2019/06/22/5d0e479164f2e15868.png
 )
 
 #####c. 创建节点类Vertex和边类Edge
@@ -30,12 +30,12 @@
 
 在PaintingManager类中，首先读取地图数据
 
-![](https://i.loli.net/2019/06/22/5d0e49957b6bd95443.png
+![地图](https://i.loli.net/2019/06/22/5d0e49957b6bd95443.png
 )
 
 初始化一定数量的车辆
 
-![](https://i.loli.net/2019/06/22/5d0e4a03efcad99745.png
+![初始化](https://i.loli.net/2019/06/22/5d0e4a03efcad99745.png
 )
 
 #####e. OrderThread类
@@ -57,11 +57,11 @@
 
 随机生成500个车辆，根据订单生成概率而出现不同的状态：
 
-![](https://i.loli.net/2019/06/22/5d0e4d29e4deb54082.png)
+![随机生成](https://i.loli.net/2019/06/22/5d0e4d29e4deb54082.png)
 
 随机取两个点，使用Dijkstra算法得到的最短路径，为了验证结果的正确性，将得到的路线用红色标注出来
 
-![17](https://i.loli.net/2019/06/22/5d0e4dc9e1f3775611.png
+![结果](https://i.loli.net/2019/06/22/5d0e4dc9e1f3775611.png
 )
 
 ### 2. 模拟车辆通信
@@ -102,7 +102,7 @@
 
 calDistance方法使用经纬度计算两辆车之间的距离
 
-![](https://i.loli.net/2019/06/22/5d0e505c755c372515.png
+![距离](https://i.loli.net/2019/06/22/5d0e505c755c372515.png
 )
 
 #####e. PerformanceThread线程类
@@ -116,25 +116,25 @@ calDistance方法使用经纬度计算两辆车之间的距离
 
 可以看到车辆根据相对距离互相订阅和取消订阅，同时生成了地图窗口，展示了车辆实时位置
 
-![](https://i.loli.net/2019/06/23/5d0e519291a1f68044.png
+![结果](https://i.loli.net/2019/06/23/5d0e519291a1f68044.png
 )
-![](https://i.loli.net/2019/06/23/5d0e5190cf7c329557.png)
+![结果](https://i.loli.net/2019/06/23/5d0e5190cf7c329557.png)
 
 关闭地图窗口，车辆消息收发的模拟还在进行中。可以看到车辆在一定距离内可自动互相订阅，并随机发送消息
-![](https://i.loli.net/2019/06/23/5d0e5234eef0244958.png
+![结果](https://i.loli.net/2019/06/23/5d0e5234eef0244958.png
 )
 
 每个订阅了发布者的接受者，都能接收到发布者发布的消息：
 
-![](https://i.loli.net/2019/06/23/5d0e5235095e941220.png
+![结果](https://i.loli.net/2019/06/23/5d0e5235095e941220.png
 )
 
 当距离超过一定限度时，车辆间自动取消订阅：
 
-![](https://i.loli.net/2019/06/23/5d0e52681749a28446.png
+![结果](https://i.loli.net/2019/06/23/5d0e52681749a28446.png
 )
 
 同时PerformanceThread实时输出当前时间戳的剩余待接收消息数：
 
-![](https://i.loli.net/2019/06/23/5d0e52686552673842.png)
+![结果](https://i.loli.net/2019/06/23/5d0e52686552673842.png)
 
